@@ -40,7 +40,7 @@ public class StreamLambdas {
 			}
 		}
 
-		System.out.println("\nEDAD DE TODAS LAS PERSONAS STREAMS AND LAMBDAS\n");
+		System.out.println("\nEDAD DE TODAS LAS PERSONAS\n");
 		for (Persona persona : listaPersonas) {
 			if (persona.getApeelido().equalsIgnoreCase("up")) {
 				System.out.println(persona.getEdad());
@@ -54,19 +54,19 @@ public class StreamLambdas {
 		}
 		
 		System.out.println("Suma total de las edades de estas personas: " + auxEdades);
-		
-/*
+
+
 		// CON STREAMS Y LAMBDAS
 		System.out.println("\nNOMBRE TODAS LAS PERSONAS STREAMS Y LAMBDAS\n");
-		listaPersonas.stream().forEach(
-				persona -> System.out.println("Nombre: " + persona.getNombre()));
+		listaPersonas.stream()
+				.forEach(persona -> System.out.println("Nombre: " + persona.getNombre()));
 
 		System.out.println("\nNOMBRE DE TODAS LAS PERSONAS CON APELLIDO \"UP\" STREAMS Y LAMBDAS\n");
 		listaPersonas
 				.stream()
 				.filter(persona -> persona.getApeelido().equalsIgnoreCase("up"))
 				.forEach(System.out::println);
-		
+	
 		System.out.println("\nEDAD DE TODAS LAS PERSONAS STREAMS AND LAMBDAS\n");
 		listaPersonas
 				.stream()
@@ -77,11 +77,10 @@ public class StreamLambdas {
 				+ listaPersonas
 						.stream()
 						.filter(persona -> persona.getApeelido().equalsIgnoreCase("up"))
-						.mapToInt(persona -> persona.getEdad()).sum());
+						.mapToInt(persona -> persona.getEdad())
+						.sum());
 
-	
 
-	*/
 	}
 
 }
