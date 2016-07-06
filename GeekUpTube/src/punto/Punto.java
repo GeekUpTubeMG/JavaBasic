@@ -18,10 +18,12 @@ public class Punto {
 	}
 
 	private void setX(int x) {
-		if (x < 0)
+		if (x < 0){
 			this.x = 0;
-		else
+			throw new NumberFormatException("Las cordenadas no pueden ser negativas");
+		}else{
 			this.x = x;
+		}
 	}
 
 	public int getY() {
@@ -29,10 +31,12 @@ public class Punto {
 	}
 
 	private void setY(int y) {
-		if (y < 0)
+		if (y < 0){
 			this.y = 0;
-		else
+			throw new NumberFormatException("Las cordenadas no pueden ser negativas");
+		}else{
 			this.y = y;
+		}
 	}
 	
 	public double modulo(){
